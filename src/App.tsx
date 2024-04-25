@@ -4,12 +4,10 @@ function App() {
   return (
     <main>
       <p>
-        <Button el="button">A Button</Button>
+        <Button disabled>A Button</Button>
       </p>
       <p>
-        <Button el="anchor" href="https://google.com">
-          A Button
-        </Button>
+        <Button href="https://google.com">A Button</Button>
       </p>
     </main>
   );

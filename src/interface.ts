@@ -2,15 +2,15 @@ import { ComponentPropsWithoutRef } from "react";
 
 export interface InputProps extends ComponentPropsWithoutRef<"input"> {
   label: string;
-  id: string;
 }
 
 export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
-  el: "button";
+  href?: never;
 }
 
 export interface AnchorProps extends ComponentPropsWithoutRef<"a"> {
-  el: "anchor";
+  href?: string;
 }
 
 export type ButtonComponentProps = ButtonProps | AnchorProps;
+   
