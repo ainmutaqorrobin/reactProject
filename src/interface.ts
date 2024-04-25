@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from "react";
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 
 export interface InputProps extends ComponentPropsWithoutRef<"input"> {
   label: string;
@@ -13,4 +13,8 @@ export interface AnchorProps extends ComponentPropsWithoutRef<"a"> {
 }
 
 export type ButtonComponentProps = ButtonProps | AnchorProps;
-   
+
+export type ContainerProps<T extends ElementType> = {
+  as?: T;
+  children: ReactNode;
+} & ComponentPropsWithoutRef<T>;
